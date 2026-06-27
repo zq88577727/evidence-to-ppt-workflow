@@ -3,7 +3,8 @@
 ## Phase 0: Brief
 
 Create `00_brief.md` with topic, audience, scope, deck length, geography,
-time window, source policy, exclusions, language, and assumptions.
+time window, source policy, exclusions, language, assumptions, and any supplied
+source materials such as PDFs, reports, URLs, outlines, or Markdown files.
 
 ## Phase 1: Research Pack
 

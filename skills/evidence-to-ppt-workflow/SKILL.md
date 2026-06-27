@@ -1,13 +1,13 @@
 ---
 name: evidence-to-ppt-workflow
-description: Use when the user has only a topic or rough idea and wants a source-backed research pack, claims matrix, and then a PPT through GPT Researcher, Codex source review, and ppt-master.
+description: Use when the user wants a source-backed PPT workflow from a topic, idea, PDF, report, outline, URL, or Markdown source, with a research pack, claims matrix, Codex source review, and ppt-master handoff.
 ---
 
 # Evidence To PPT Workflow
 
 ## Purpose
 
-Turn a topic into a presentation through three gated phases:
+Turn a topic or existing source material into a presentation through three gated phases:
 
 1. `gpt-researcher` gathers sources and drafts a research pack.
 2. Codex audits sources and builds a claims matrix.
@@ -20,12 +20,13 @@ Do not skip the audit gate. The workflow is designed for traceable evidence, not
 Use this skill when the user asks for any of these:
 
 - start from only a topic, idea, thesis, or question
+- start from a PDF, report, webpage, outline, Markdown file, or mixed source material that still needs evidence review
 - generate PPT support material before making slides
 - make a presentation with verifiable sources
 - research first, then create a deck
 - "主题 -> 证据材料包 -> PPT"
 
-If the user already supplied a clean source document and only wants slides, use `ppt-master` directly.
+If the user already supplied a clean source document and only wants slides with no extra research, audit, source table, or claims matrix, use `ppt-master` directly.
 
 ## Required Companion Skills
 
@@ -62,6 +63,7 @@ Use stable file names so future turns can resume without re-deriving state.
 ## Phase 0: Scope The Topic
 
 If the user gives only a topic, infer sensible defaults and write `00_brief.md`.
+If the user supplies PDFs, reports, URLs, outlines, or Markdown files, summarize the provided materials in `00_brief.md` and treat them as initial sources for Phase 1 and Phase 2.
 Ask a question only when the answer materially changes research boundaries.
 
 `00_brief.md` must include:
@@ -74,6 +76,7 @@ Ask a question only when the answer materially changes research boundaries.
 - excluded source types
 - output language
 - known assumptions
+- supplied source materials, if any
 
 Default deck length: 8-12 slides.
 Default source policy: prefer primary and authoritative sources; blogs and social posts are background only.

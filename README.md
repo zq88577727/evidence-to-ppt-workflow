@@ -1,11 +1,15 @@
 # Evidence To PPT Workflow
 
+<p align="right">
+🇨🇳 <strong>中文</strong> | 🇺🇸 <a href="README.en.md">English</a>
+</p>
+
 [![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827)](skills/evidence-to-ppt-workflow/SKILL.md)
 [![Workflow](https://img.shields.io/badge/workflow-evidence--first-2563eb)](#工作流总览)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![No API Keys](https://img.shields.io/badge/secrets-not%20included-red)](#安全注意事项)
 
-把“只有一个主题或想法”的 PPT 需求，先变成可追溯证据材料包，再经过 Codex 来源审查和 claims matrix，最后交给 `ppt-master` 生成演示文稿。
+把 PPT 需求先变成可追溯证据材料包，再经过 Codex 来源审查和 claims matrix，最后交给 `ppt-master` 生成演示文稿。它既支持“只有一个主题或想法”的早期需求，也支持基于已有 PDF、报告、网页、提纲或 Markdown 继续补充证据、审查来源并生成 PPT 输入材料。
 
 > 本项目不是 GPT Researcher、ppt-master、Tavily、DeepSeek、Ollama 或 Brave 的官方插件。它只是一个本地 Codex workflow 编排层。
 
@@ -19,14 +23,15 @@
 
 ## 适合解决什么问题
 
-- 你只有一个主题，还没有 PDF、报告或提纲。
+- 你只有一个主题、想法或问题，还没有 PDF、报告或提纲，需要先研究再做 PPT。
+- 你已经有 PDF、报告、网页、提纲或 Markdown，但希望先补充外部证据、审查来源、整理 claims matrix，再进入 PPT 制作。
 - 你希望 PPT 中的事实、数据和判断都有来源。
 - 你希望在进入 PPT 制作前，先生成 `source_table.csv` 和 `claims_matrix.md`。
 - 你想让 Codex 把 GPT Researcher 与 ppt-master 串成一个固定流程。
 
 ## 不适合什么问题
 
-- 已经有完整、可信、可直接使用的源文档，只需要做 PPT。此时直接用 `ppt-master`。
+- 已经有完整、可信、可直接使用的源文档，并且不需要补充研究、来源审查或 claims matrix，只需要做 PPT。此时直接用 `ppt-master` 更轻量。
 - 需要绕过付费墙、访问控制或服务条款抓取内容。
 - 需要保证所有网络资料绝对正确。这个 workflow 只能降低风险，不能替代人工审稿。
 - 需要自动提交 API key 或托管密钥。
@@ -130,6 +135,13 @@ test -f ~/.codex/skills/ppt-master/SKILL.md
 
 ```text
 用 evidence-to-ppt-workflow，把“生成式 AI 对咨询行业交付模式的影响”做成有来源支撑的 PPT 材料包，先不要生成最终 PPT。
+```
+
+也可以从已有材料开始：
+
+```text
+用 evidence-to-ppt-workflow 基于这份 PDF 和我已有的大纲生成 PPT 材料包。
+请先补充外部权威来源，审查每个关键观点，再整理 claims matrix 和 ppt-master 输入文件。
 ```
 
 ## 产物目录结构

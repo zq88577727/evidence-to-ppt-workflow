@@ -22,6 +22,16 @@ Restart Codex after installing the skill.
 用 evidence-to-ppt-workflow 生成“生成式 AI 对咨询行业交付模式的影响”的证据材料包和 PPT 大纲。先不要生成最终 PPT。
 ```
 
+## Start From Existing Materials
+
+```text
+用 evidence-to-ppt-workflow 基于这份 PDF 和我已有的大纲生成 PPT 材料包。
+请先补充外部权威来源，审查每个关键观点，再整理 claims matrix 和 ppt-master 输入文件。
+```
+
+Use `ppt-master` directly only when the supplied material is already complete,
+trusted, and ready for slides without additional research or source audit.
+
 ## Expected Outputs
 
 ```text
