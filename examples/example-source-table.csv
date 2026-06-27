@@ -1,0 +1,5 @@
+source_id,title,author_or_org,date,url,source_type,access_date,claim_supported,quoted_or_paraphrased_evidence,reliability_tier,notes
+S1,AI Index Report,Stanford HAI,2025,https://hai.stanford.edu/ai-index,research report,2026-06-27,AI capability and adoption context,Annual AI Index tracks AI investment and deployment signals,B,Example public source
+S2,AI Risk Management Framework,NIST,2023,https://www.nist.gov/itl/ai-risk-management-framework,government framework,2026-06-27,AI governance and risk review,AI systems should be managed with documented risk and governance practices,A,Used to justify source audit and caveat gates
+S3,GPT Researcher Documentation,GPT Researcher,n.d.,https://github.com/assafelovic/gpt-researcher,software docs,2026-06-27,Workflow dependency,GPT Researcher provides research report generation with citations,B,Used for tool capability description
+S4,ppt-master Documentation,ppt-master,n.d.,https://github.com/hugohe3/ppt-master,software docs,2026-06-27,Workflow dependency,ppt-master is used as the PPT generation layer after approved source material is prepared,B,Used for tool capability description

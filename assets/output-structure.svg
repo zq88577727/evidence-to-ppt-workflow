@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="420" viewBox="0 0 920 420" role="img" aria-labelledby="title desc">
+  <title id="title">Output folder structure</title>
+  <desc id="desc">Folder tree for evidence-to-ppt workflow outputs.</desc>
+  <rect width="920" height="420" fill="#f8fafc"/>
+  <text x="40" y="50" font-family="Arial" font-size="26" font-weight="700" fill="#0f172a">Output Folder Contract</text>
+  <text x="40" y="80" font-family="Arial" font-size="15" fill="#475569">Stable filenames let future Codex turns resume without re-deriving state.</text>
+  <rect x="40" y="110" width="840" height="260" rx="14" fill="#0f172a"/>
+  <text x="70" y="150" font-family="Menlo,Consolas,monospace" font-size="16" fill="#e2e8f0">work/evidence-to-ppt/&lt;topic-slug&gt;/</text>
+  <text x="95" y="180" font-family="Menlo,Consolas,monospace" font-size="15" fill="#93c5fd">00_brief.md</text>
+  <text x="95" y="208" font-family="Menlo,Consolas,monospace" font-size="15" fill="#93c5fd">01_research_pack.md</text>
+  <text x="95" y="236" font-family="Menlo,Consolas,monospace" font-size="15" fill="#93c5fd">02_source_table.csv</text>
+  <text x="95" y="264" font-family="Menlo,Consolas,monospace" font-size="15" fill="#93c5fd">03_claims_matrix.md</text>
+  <text x="95" y="292" font-family="Menlo,Consolas,monospace" font-size="15" fill="#93c5fd">04_ppt_outline.md</text>
+  <text x="95" y="320" font-family="Menlo,Consolas,monospace" font-size="15" fill="#93c5fd">05_audit_report.md</text>
+  <text x="95" y="348" font-family="Menlo,Consolas,monospace" font-size="15" fill="#93c5fd">06_ppt_master_input.md</text>
+</svg>

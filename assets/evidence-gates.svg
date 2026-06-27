@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560" role="img" aria-labelledby="title desc">
+  <title id="title">Evidence gates diagram</title>
+  <desc id="desc">Three review gates used before material can enter the deck: source table, claims matrix, and audit report.</desc>
+  <defs>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="#0f172a" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="6" orient="auto">
+      <path d="M2,2 L10,6 L2,10 Z" fill="#334155"/>
+    </marker>
+  </defs>
+  <rect width="1180" height="560" fill="#f8fafc"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="48" y="58" font-size="34" font-weight="800" fill="#0f172a">Evidence gates before slide generation</text>
+    <text x="48" y="88" font-size="17" fill="#475569">The workflow is useful because it slows the path from research to PPT just enough to reject weak claims.</text>
+
+    <g transform="translate(48 138)" filter="url(#shadow)">
+      <rect width="322" height="292" rx="20" fill="#ffffff"/>
+      <rect width="322" height="68" rx="20" fill="#dbeafe"/>
+      <text x="28" y="43" font-size="21" font-weight="800" fill="#1d4ed8">Gate 1: Source Table</text>
+      <text x="28" y="104" font-size="15" fill="#334155">Each source becomes a row with:</text>
+      <text x="46" y="140" font-size="15" fill="#334155">URL, author, date, source type</text>
+      <text x="46" y="170" font-size="15" fill="#334155">supported claim</text>
+      <text x="46" y="200" font-size="15" fill="#334155">reliability tier A / B / C / Reject</text>
+      <rect x="28" y="232" width="266" height="34" rx="8" fill="#eff6ff"/>
+      <text x="44" y="255" font-size="14" font-weight="700" fill="#1d4ed8">Output: 02_source_table.csv</text>
+    </g>
+
+    <line x1="396" y1="284" x2="474" y2="284" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <g transform="translate(500 138)" filter="url(#shadow)">
+      <rect width="322" height="292" rx="20" fill="#ffffff"/>
+      <rect width="322" height="68" rx="20" fill="#ede9fe"/>
+      <text x="28" y="43" font-size="21" font-weight="800" fill="#6d28d9">Gate 2: Claims Matrix</text>
+      <text x="28" y="104" font-size="15" fill="#334155">Every slide-worthy claim gets:</text>
+      <text x="46" y="140" font-size="15" fill="#334155">accepted / caveat / rejected status</text>
+      <text x="46" y="170" font-size="15" fill="#334155">source ids and reasoning</text>
+      <text x="46" y="200" font-size="15" fill="#334155">safe deck wording</text>
+      <rect x="28" y="232" width="266" height="34" rx="8" fill="#f5f3ff"/>
+      <text x="44" y="255" font-size="14" font-weight="700" fill="#6d28d9">Output: 03_claims_matrix.md</text>
+    </g>
+
+    <line x1="848" y1="284" x2="926" y2="284" stroke="#334155" stroke-width="3" marker-end="url(#arrow)"/>
+
+    <g transform="translate(952 138)" filter="url(#shadow)">
+      <rect width="180" height="292" rx="20" fill="#ffffff"/>
+      <rect width="180" height="68" rx="20" fill="#dcfce7"/>
+      <text x="22" y="43" font-size="20" font-weight="800" fill="#166534">Gate 3</text>
+      <text x="22" y="104" font-size="15" fill="#334155">Audit report says:</text>
+      <text x="22" y="140" font-size="15" fill="#334155">ready</text>
+      <text x="22" y="170" font-size="15" fill="#334155">needs more sources</text>
+      <text x="22" y="200" font-size="15" fill="#334155">or blocked</text>
+      <rect x="22" y="232" width="136" height="34" rx="8" fill="#f0fdf4"/>
+      <text x="36" y="255" font-size="13" font-weight="700" fill="#166534">05_audit_report</text>
+    </g>
+
+    <rect x="48" y="468" width="1084" height="44" rx="12" fill="#0f172a"/>
+    <text x="74" y="497" font-size="15" fill="#e2e8f0">Result: ppt-master receives fewer inputs, but those inputs are traceable and safer to turn into editable slides.</text>
+  </g>
+</svg>

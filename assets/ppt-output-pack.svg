@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="560" viewBox="0 0 1180 560" role="img" aria-labelledby="title desc">
+  <title id="title">PPT output pack diagram</title>
+  <desc id="desc">A diagram showing the workflow output folder and the final ppt-master input package.</desc>
+  <defs>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+  <rect width="1180" height="560" fill="#f8fafc"/>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="52" y="58" font-size="34" font-weight="800" fill="#0f172a">Output pack: everything needed before ppt-master</text>
+    <text x="52" y="88" font-size="17" fill="#475569">Stable filenames let future Codex turns resume without reconstructing context.</text>
+
+    <g transform="translate(52 128)" filter="url(#shadow)">
+      <rect width="620" height="366" rx="22" fill="#111827"/>
+      <text x="34" y="46" font-size="18" fill="#cbd5e1">work/evidence-to-ppt/&lt;topic-slug&gt;/</text>
+      <g font-size="16">
+        <text x="58" y="92" fill="#93c5fd">00_brief.md</text>
+        <text x="58" y="130" fill="#93c5fd">01_research_pack.md</text>
+        <text x="58" y="168" fill="#93c5fd">02_source_table.csv</text>
+        <text x="58" y="206" fill="#c4b5fd">03_claims_matrix.md</text>
+        <text x="58" y="244" fill="#bbf7d0">04_ppt_outline.md</text>
+        <text x="58" y="282" fill="#bbf7d0">05_audit_report.md</text>
+        <text x="58" y="320" fill="#fed7aa">06_ppt_master_input.md</text>
+      </g>
+      <rect x="390" y="82" width="180" height="210" rx="16" fill="#1f2937" stroke="#334155"/>
+      <text x="416" y="122" font-size="16" font-weight="700" fill="#ffffff">Traceability</text>
+      <text x="416" y="154" font-size="14" fill="#cbd5e1">source id</text>
+      <text x="416" y="184" font-size="14" fill="#cbd5e1">claim status</text>
+      <text x="416" y="214" font-size="14" fill="#cbd5e1">risk caveat</text>
+      <text x="416" y="244" font-size="14" fill="#cbd5e1">footnote text</text>
+    </g>
+
+    <g transform="translate(724 154)" filter="url(#shadow)">
+      <rect width="404" height="312" rx="22" fill="#ffffff"/>
+      <text x="32" y="50" font-size="22" font-weight="800" fill="#0f172a">Hand-off to ppt-master</text>
+      <text x="32" y="82" font-size="15" fill="#475569">One reviewed source document becomes the deck input.</text>
+      <rect x="32" y="112" width="340" height="56" rx="12" fill="#fff7ed" stroke="#fdba74"/>
+      <text x="54" y="147" font-size="16" font-weight="700" fill="#9a3412">06_ppt_master_input.md</text>
+      <rect x="32" y="190" width="150" height="82" rx="14" fill="#eff6ff" stroke="#bfdbfe"/>
+      <text x="54" y="224" font-size="15" font-weight="700" fill="#1d4ed8">PPTX project</text>
+      <text x="54" y="250" font-size="13" fill="#334155">generated assets</text>
+      <rect x="222" y="190" width="150" height="82" rx="14" fill="#f0fdf4" stroke="#86efac"/>
+      <text x="244" y="224" font-size="15" font-weight="700" fill="#166534">Editable PPTX</text>
+      <text x="244" y="250" font-size="13" fill="#334155">final deck</text>
+    </g>
+  </g>
+</svg>
