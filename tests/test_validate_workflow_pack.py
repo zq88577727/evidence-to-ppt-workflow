@@ -8,6 +8,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 VALIDATOR = ROOT / "scripts" / "validate_workflow_pack.py"
 SMOKE_INSTALL = ROOT / "scripts" / "smoke_install.py"
+SKILL_DIR = ROOT / "skills" / "evidence-to-ppt-workflow"
+SKILL_VALIDATOR = SKILL_DIR / "scripts" / "validate_workflow_pack.py"
 FIXTURES = ROOT / "tests" / "fixtures"
 
 
@@ -54,6 +56,31 @@ class WorkflowPackValidatorTest(unittest.TestCase):
 
         self.assertEqual(result.returncode, 1)
         self.assertIn("has no parseable source IDs", result.stdout)
+
+
+class SkillPackageTest(unittest.TestCase):
+    def test_skill_package_includes_synced_validator_and_contract(self):
+        canonical_contract = ROOT / "workflow" / "contract.json"
+        skill_contract = SKILL_DIR / "workflow" / "contract.json"
+
+        self.assertTrue((SKILL_DIR / "SKILL.md").is_file())
+        self.assertTrue(SKILL_VALIDATOR.is_file())
+        self.assertTrue(skill_contract.is_file())
+        self.assertEqual(VALIDATOR.read_bytes(), SKILL_VALIDATOR.read_bytes())
+        self.assertEqual(canonical_contract.read_bytes(), skill_contract.read_bytes())
+
+    def test_packaged_validator_runs_from_skill_directory(self):
+        result = subprocess.run(
+            [sys.executable, str(SKILL_VALIDATOR), str(FIXTURES / "valid_pack")],
+            cwd=ROOT,
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,
+            check=False,
+        )
+
+        self.assertEqual(result.returncode, 0, result.stdout)
+        self.assertIn("PASS workflow pack validation", result.stdout)
 
 
 class SmokeInstallTest(unittest.TestCase):

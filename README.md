@@ -115,6 +115,8 @@ mkdir -p ~/.codex/skills
 cp -R skills/evidence-to-ppt-workflow ~/.codex/skills/evidence-to-ppt-workflow
 ```
 
+这个目录已包含 `SKILL.md`、`workflow/contract.json` 和 `scripts/validate_workflow_pack.py`，复制整个目录即可保留本 workflow 的校验闭环。
+
 安装后检查：
 
 ```bash

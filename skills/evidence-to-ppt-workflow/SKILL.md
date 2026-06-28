@@ -15,7 +15,7 @@ Turn a topic or existing source material into a presentation through three gated
 
 Do not skip the audit gate. The workflow is designed for traceable evidence, not generic web summaries.
 
-Hard delivery gates are defined in this repository's `workflow/contract.json`.
+Hard delivery gates are defined in this skill package's `workflow/contract.json`.
 Use that machine-readable contract for validator-compatible file names,
 source-table headers, minimum credible source count, claim evidence requirements,
 slide source bindings, and ppt-master handoff constraints.
@@ -166,10 +166,10 @@ Include:
 
 Hard gate: if fewer than 5 credible sources remain, or the central claim lacks evidence, stop and ask whether to broaden the research.
 
-For reusable packs, run the repository validator when available:
+For reusable packs, run the packaged validator when available:
 
 ```bash
-python3 scripts/validate_workflow_pack.py work/evidence-to-ppt/<topic-slug>
+python3 ~/.codex/skills/evidence-to-ppt-workflow/scripts/validate_workflow_pack.py work/evidence-to-ppt/<topic-slug>
 ```
 
 ## Phase 3: PPT Outline

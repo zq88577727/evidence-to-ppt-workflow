@@ -98,6 +98,8 @@ mkdir -p ~/.codex/skills
 cp -R skills/evidence-to-ppt-workflow ~/.codex/skills/evidence-to-ppt-workflow
 ```
 
+The folder includes `SKILL.md`, `workflow/contract.json`, and `scripts/validate_workflow_pack.py`, so copying the whole directory preserves the workflow validation loop.
+
 Verify:
 
 ```bash
