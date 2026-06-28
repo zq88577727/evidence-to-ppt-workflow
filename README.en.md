@@ -246,7 +246,6 @@ Yes. Say "do not generate the final PPT yet" and the workflow can stop before or
 - [ ] Add optional templates for business analysis, industry research, and academic reporting.
 - [ ] Add more provider configuration examples.
 - [ ] Add an end-to-end demo output pack.
-- [ ] Add release tags and versioned installation notes.
 
 ## License
 

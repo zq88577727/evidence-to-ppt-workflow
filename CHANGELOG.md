@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 - 2026-06-28
+
+- Tightened claims matrix validation so accepted and caveated claims must include parseable source IDs in `Evidence`.
+- Replaced the internal Superpowers implementation plan with public design notes.
+- Removed completed release-tag work from the README roadmap.
+
 ## 0.2.0 - 2026-06-28
 
 - Added a machine-readable workflow contract and local validator.

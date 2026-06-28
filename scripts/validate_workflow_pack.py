@@ -119,7 +119,11 @@ def validate_claims_matrix(pack_dir, contract, source_ids, errors):
             if not evidence:
                 add(errors, f"03_claims_matrix.md: {claim_label} has status \"{status}\" but empty Evidence.")
                 continue
-            for source_id in SOURCE_ID_PATTERN.findall(evidence):
+            found_ids = SOURCE_ID_PATTERN.findall(evidence)
+            if not found_ids:
+                add(errors, f"03_claims_matrix.md: {claim_label} has no parseable source IDs in Evidence.")
+                continue
+            for source_id in found_ids:
                 if source_id not in source_ids:
                     add(errors, f"03_claims_matrix.md: {claim_label} references unknown source id {source_id}.")
 

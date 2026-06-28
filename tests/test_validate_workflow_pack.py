@@ -49,6 +49,12 @@ class WorkflowPackValidatorTest(unittest.TestCase):
         self.assertIn("Credible A/B sources: 4", result.stdout)
         self.assertIn("minimum required: 5", result.stdout)
 
+    def test_claim_evidence_without_source_id_fails(self):
+        result = self.run_validator("invalid_evidence_without_source_id")
+
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("has no parseable source IDs", result.stdout)
+
 
 class SmokeInstallTest(unittest.TestCase):
     def test_smoke_install_passes_when_required_skills_exist(self):
