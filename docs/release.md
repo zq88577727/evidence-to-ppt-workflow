@@ -25,9 +25,9 @@ Check that:
 Only tag after the user explicitly approves a release.
 
 ```bash
-git tag -a v0.1.0 -m "v0.1.0"
+git tag -a vX.Y.Z -m "vX.Y.Z"
 git push origin main
-git push origin v0.1.0
+git push origin vX.Y.Z
 ```
 
 Do not force-push release tags.

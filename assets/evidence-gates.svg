@@ -55,6 +55,6 @@
     </g>
 
     <rect x="48" y="468" width="1084" height="44" rx="12" fill="#0f172a"/>
-    <text x="74" y="497" font-size="15" fill="#e2e8f0">Result: ppt-master receives fewer inputs, but those inputs are traceable and safer to turn into editable slides.</text>
+    <text x="74" y="497" font-size="15" fill="#e2e8f0">Result: ppt-master receives constrained, traceable inputs that are safer to turn into editable slides.</text>
   </g>
 </svg>

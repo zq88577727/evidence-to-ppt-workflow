@@ -49,7 +49,7 @@
 
 ```mermaid
 flowchart LR
-  A["Topic / Idea"] --> B["GPT Researcher"]
+  A["Topic / Idea / Source Material"] --> B["GPT Researcher"]
   B --> C["Research Pack"]
   C --> D["Codex Source Audit"]
   D --> E["Source Table"]

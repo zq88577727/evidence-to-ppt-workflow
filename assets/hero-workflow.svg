@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="title desc">
   <title id="title">Evidence To PPT Workflow hero diagram</title>
-  <desc id="desc">A dashboard-style workflow showing how a topic becomes an evidence-reviewed PPT input and then an editable PPTX.</desc>
+  <desc id="desc">A dashboard-style workflow showing how a topic, idea, or source material becomes an evidence-reviewed PPT input and then an editable PPTX.</desc>
   <defs>
     <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
       <feDropShadow dx="0" dy="14" stdDeviation="18" flood-color="#0f172a" flood-opacity="0.13"/>
@@ -12,13 +12,13 @@
   <rect width="1440" height="720" rx="0" fill="#f8fafc"/>
   <g transform="translate(72 58)">
     <text x="0" y="0" font-family="Arial, Helvetica, sans-serif" font-size="42" font-weight="800" fill="#0f172a">Evidence-first PPT workflow</text>
-    <text x="0" y="38" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#475569">Start with a topic. Research with citations. Audit every claim. Hand clean material to ppt-master.</text>
+    <text x="0" y="38" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#475569">Start with a topic, idea, or source material. Research with citations. Audit every claim. Hand clean material to ppt-master.</text>
   </g>
   <g transform="translate(72 132)" font-family="Arial, Helvetica, sans-serif">
     <rect x="0" y="0" width="1296" height="482" rx="28" fill="#ffffff" filter="url(#shadow)"/>
     <rect x="30" y="30" width="1236" height="92" rx="18" fill="#0f172a"/>
-    <text x="58" y="70" font-size="21" font-weight="700" fill="#ffffff">Topic / Idea</text>
-    <text x="58" y="99" font-size="14" fill="#cbd5e1">A rough deck direction.</text>
+    <text x="58" y="70" font-size="19" font-weight="700" fill="#ffffff">Topic / Idea / Source Material</text>
+    <text x="58" y="99" font-size="14" fill="#cbd5e1">Brief, docs, URLs, or outline.</text>
     <text x="318" y="70" font-size="21" font-weight="700" fill="#ffffff">Evidence Engine</text>
     <text x="318" y="99" font-size="14" fill="#cbd5e1">Research with source links.</text>
     <text x="650" y="70" font-size="21" font-weight="700" fill="#ffffff">Codex Audit Gate</text>
