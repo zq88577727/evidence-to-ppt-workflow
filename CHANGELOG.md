@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 - 2026-06-28
 
 - Added a machine-readable workflow contract and local validator.
 - Added validator tests, invalid fixtures, and a complete passing example pack.
