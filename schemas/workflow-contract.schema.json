@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence-to-PPT Workflow Contract",
+  "type": "object",
+  "required": [
+    "version",
+    "required_files",
+    "source_table_headers",
+    "credible_source_tiers",
+    "minimum_credible_sources",
+    "claim_statuses_requiring_evidence",
+    "ppt_master_input_required_phrases"
+  ],
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "required_files": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "source_table_headers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "credible_source_tiers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "minimum_credible_sources": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "claim_statuses_requiring_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "ppt_master_input_required_phrases": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}

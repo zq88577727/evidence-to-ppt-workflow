@@ -1,0 +1,5 @@
+source_id,title,author_or_org,date,url,source_type,access_date,claim_supported,quoted_or_paraphrased_evidence,reliability_tier,notes
+S1,GPT Researcher Repository,GPT Researcher,n.d.,https://github.com/assafelovic/gpt-researcher,software documentation,2026-06-28,research pack generation,GPT Researcher documents autonomous research reports with citations,B,Public repository documentation
+S2,ppt-master Repository,ppt-master,n.d.,https://github.com/hugohe3/ppt-master,software documentation,2026-06-28,PPT generation handoff,ppt-master documents AI-driven SVG/PPT generation,B,Public repository documentation
+S3,AI Risk Management Framework,NIST,2023,https://www.nist.gov/itl/ai-risk-management-framework,government framework,2026-06-28,documented risk controls,NIST AI RMF supports documented risk management practices,A,Official government source
+S4,AI Index Report,Stanford HAI,2025,https://hai.stanford.edu/ai-index,research report,2026-06-28,AI adoption context,Stanford HAI publishes annual AI Index reports,B,Research institution source

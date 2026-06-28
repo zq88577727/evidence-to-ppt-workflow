@@ -1,0 +1,32 @@
+{
+  "version": "0.1.0",
+  "required_files": [
+    "00_brief.md",
+    "01_research_pack.md",
+    "02_source_table.csv",
+    "03_claims_matrix.md",
+    "04_ppt_outline.md",
+    "05_audit_report.md",
+    "06_ppt_master_input.md"
+  ],
+  "source_table_headers": [
+    "source_id",
+    "title",
+    "author_or_org",
+    "date",
+    "url",
+    "source_type",
+    "access_date",
+    "claim_supported",
+    "quoted_or_paraphrased_evidence",
+    "reliability_tier",
+    "notes"
+  ],
+  "credible_source_tiers": ["A", "B"],
+  "minimum_credible_sources": 5,
+  "claim_statuses_requiring_evidence": ["accepted", "needs caveat"],
+  "ppt_master_input_required_phrases": [
+    "do not introduce new factual claims not present in the approved materials",
+    "不要新增未经审查事实"
+  ]
+}

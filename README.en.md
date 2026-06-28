@@ -5,6 +5,7 @@
 </p>
 
 [![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827)](skills/evidence-to-ppt-workflow/SKILL.md)
+[![CI](https://github.com/zq88577727/evidence-to-ppt-workflow/actions/workflows/validate.yml/badge.svg)](https://github.com/zq88577727/evidence-to-ppt-workflow/actions/workflows/validate.yml)
 [![Workflow](https://img.shields.io/badge/workflow-evidence--first-2563eb)](#workflow-overview)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![No API Keys](https://img.shields.io/badge/secrets-not%20included-red)](#security-notes)
@@ -100,9 +101,7 @@ cp -R skills/evidence-to-ppt-workflow ~/.codex/skills/evidence-to-ppt-workflow
 Verify:
 
 ```bash
-test -f ~/.codex/skills/evidence-to-ppt-workflow/SKILL.md
-test -f ~/.codex/skills/gpt-researcher/SKILL.md
-test -f ~/.codex/skills/ppt-master/SKILL.md
+python3 scripts/smoke_install.py --codex-home ~/.codex
 ```
 
 Restart Codex after installation.
@@ -164,6 +163,20 @@ A deliverable run should meet these criteria:
 - If the user asks for the final deck, the workflow must produce an editable PPTX or a clear blocked reason.
 
 Editable PPTX generation comes from `ppt-master`. This workflow prepares evidence-reviewed inputs so unsupported claims are less likely to enter the deck.
+
+## Validation
+
+Machine-readable hard gates live in [workflow/contract.json](workflow/contract.json), with human-readable notes in [docs/workflow-contract.md](docs/workflow-contract.md).
+
+Run the local validator against the complete public example:
+
+```bash
+python3 scripts/validate_workflow_pack.py examples/complete-run
+```
+
+It checks required files, source table headers, at least 5 A/B-tier credible sources, evidence bindings for accepted and caveated claims, source bindings for every slide, and the no-new-claims instruction in `06_ppt_master_input.md`.
+
+The `examples/example-*` files are format examples only. [examples/complete-run](examples/complete-run) is the validator-passing complete example.
 
 ## API Key And Model Setup
 
@@ -230,10 +243,10 @@ Yes. Say "do not generate the final PPT yet" and the workflow can stop before or
 
 ## Roadmap
 
-- [ ] Add a validator for claims matrix source IDs.
 - [ ] Add optional templates for business analysis, industry research, and academic reporting.
 - [ ] Add more provider configuration examples.
 - [ ] Add an end-to-end demo output pack.
+- [ ] Add release tags and versioned installation notes.
 
 ## License
 

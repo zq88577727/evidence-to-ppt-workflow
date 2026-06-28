@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: GPT Researcher
+    url: https://github.com/assafelovic/gpt-researcher
+    about: Use upstream support for GPT Researcher provider or runtime issues.
+  - name: ppt-master
+    url: https://github.com/hugohe3/ppt-master
+    about: Use upstream support for ppt-master generation issues.

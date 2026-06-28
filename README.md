@@ -5,6 +5,7 @@
 </p>
 
 [![Codex Skill](https://img.shields.io/badge/Codex-Skill-111827)](skills/evidence-to-ppt-workflow/SKILL.md)
+[![CI](https://github.com/zq88577727/evidence-to-ppt-workflow/actions/workflows/validate.yml/badge.svg)](https://github.com/zq88577727/evidence-to-ppt-workflow/actions/workflows/validate.yml)
 [![Workflow](https://img.shields.io/badge/workflow-evidence--first-2563eb)](#工作流总览)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![No API Keys](https://img.shields.io/badge/secrets-not%20included-red)](#安全注意事项)
@@ -117,9 +118,7 @@ cp -R skills/evidence-to-ppt-workflow ~/.codex/skills/evidence-to-ppt-workflow
 安装后检查：
 
 ```bash
-test -f ~/.codex/skills/evidence-to-ppt-workflow/SKILL.md
-test -f ~/.codex/skills/gpt-researcher/SKILL.md
-test -f ~/.codex/skills/ppt-master/SKILL.md
+python3 scripts/smoke_install.py --codex-home ~/.codex
 ```
 
 重启 Codex 后即可触发。
@@ -183,6 +182,27 @@ work/evidence-to-ppt/<topic-slug>/
 - 如果用户要求最终 PPT，必须产出可打开、可编辑的 PPTX，或给出明确 blocked reason。
 
 可编辑 PPTX 的生成能力来自 `ppt-master`。本 workflow 的职责是把“只有主题”的需求整理成经过来源审查的输入材料，降低幻觉和无来源内容进入 PPT 的风险。
+
+## 自动校验
+
+硬门槛的机器可读定义见 [workflow/contract.json](workflow/contract.json)，说明文档见 [docs/workflow-contract.md](docs/workflow-contract.md)。
+
+本仓库提供一个本地 validator，用于检查材料包是否满足基础交付门槛：
+
+```bash
+python3 scripts/validate_workflow_pack.py examples/complete-run
+```
+
+它会检查：
+
+- 必需文件是否存在。
+- `02_source_table.csv` 表头是否符合 contract。
+- A/B 级可信来源是否至少 5 个。
+- `accepted` 和 `needs caveat` 的 claim 是否绑定 Evidence。
+- PPT outline 每页是否绑定已知 source id。
+- `06_ppt_master_input.md` 是否包含“不新增未经审查事实”的约束。
+
+`examples/example-*` 是格式示例，不代表合格交付；[examples/complete-run](examples/complete-run) 是可通过 validator 的完整样例。
 
 ## API key / 模型配置方式
 
@@ -249,11 +269,10 @@ A: 可以。提示中说明“先不要生成最终 PPT”即可停在 `06_ppt_m
 
 ## Roadmap
 
-- [ ] 增加自动校验脚本，检查 `claims_matrix.md` 中每个 claim 是否有 source id。
 - [ ] 增加可选模板，用于不同 PPT 场景：商业分析、行业研究、学术汇报。
-- [ ] 增加英文 README。
 - [ ] 增加更多 provider 配置示例。
 - [ ] 增加端到端 demo 输出样例。
+- [ ] 增加 release tag 和版本化安装说明。
 
 ## License
 

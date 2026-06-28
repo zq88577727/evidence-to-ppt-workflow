@@ -1,5 +1,11 @@
 # Workflow Contract
 
+The machine-readable source of truth is
+[`workflow/contract.json`](../workflow/contract.json). This document explains
+the same gates for humans. If a rule drifts, update the JSON contract first and
+then update this file, `README.md`, `README.en.md`, and
+`skills/evidence-to-ppt-workflow/SKILL.md`.
+
 ## Phase 0: Brief
 
 Create `00_brief.md` with topic, audience, scope, deck length, geography,
@@ -58,6 +64,18 @@ Stop and report the blocker if:
 - API keys are missing
 - required companion skills are missing
 - upstream commands fail
+
+## Local Validation
+
+Validate a completed material pack with:
+
+```bash
+python3 scripts/validate_workflow_pack.py path/to/workflow-pack
+```
+
+The validator checks the required files, source table headers, A/B source count,
+claim evidence bindings, slide source bindings, and the no-new-claims constraint
+in `06_ppt_master_input.md`.
 
 ## Delivery Criteria
 

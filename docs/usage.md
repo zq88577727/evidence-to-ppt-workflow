@@ -9,6 +9,12 @@ cp -R skills/evidence-to-ppt-workflow ~/.codex/skills/evidence-to-ppt-workflow
 
 Restart Codex after installing the skill.
 
+Validate the local install:
+
+```bash
+python3 scripts/smoke_install.py --codex-home ~/.codex
+```
+
 ## Basic Prompt
 
 ```text
@@ -43,6 +49,20 @@ work/evidence-to-ppt/<topic-slug>/
   04_ppt_outline.md
   05_audit_report.md
   06_ppt_master_input.md
+```
+
+## Validate A Material Pack
+
+Run:
+
+```bash
+python3 scripts/validate_workflow_pack.py work/evidence-to-ppt/<topic-slug>
+```
+
+For a known-good public example:
+
+```bash
+python3 scripts/validate_workflow_pack.py examples/complete-run
 ```
 
 ## Gate Behavior
